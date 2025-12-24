@@ -1,0 +1,6 @@
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Ignorar datos de guardado locales (para que cada quien empiece su juego de cero)
+data/save.json
