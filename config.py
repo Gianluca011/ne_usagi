@@ -19,6 +19,7 @@ DURACION_SUENO = 5  # Segundos que dura el sueño
 KEY_FEED = pygame.K_SPACE  # Espacio para alimentar
 KEY_SLEEP = pygame.K_e  # E para dormir
 KEY_PLAY = pygame.K_j  # J para jugar
+KEY_SHOP = pygame.K_s  # S para tienda
 
 # --- Colores de las Barras (Basados en get_bar_color) ---
 COLOR_HIGH = (100, 220, 100)  # > 80%
