@@ -1,31 +1,33 @@
-# Ne Usagi - Mi Tamagotchi 🐰
+# 🐰 Ne Usagi (ねウサギ) — Virtual Pet Tamagotchi
 
-¡Bienvenido a Ne Usagi! Un juego estilo Tamagotchi hecho en Python usando Pygame.
-Alimenta, haz dormir, juega y cuida de tu mascota virtual.
+[![Python Version](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-2.5+-green?style=for-the-badge&logo=python&logoColor=white)](https://www.pygame.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Fase%202%20(Refactored)-orange?style=for-the-badge)]()
 
-## Requisitos Previos
+**Ne Usagi** es una mascota virtual estilo retro y *pixel-art* desarrollada en **Python** con **Pygame**. Inspirada en los clásicos Tamagotchis y en la estética *kawaii* japonesa, permite cuidar, alimentar, personalizar y jugar con un tierno conejito que reacciona en tiempo real a tus cuidados y a la hora del día.
 
-Para poder jugar desde el código fuente, necesitarás tener instalado:
-- [Python 3.x](https://www.python.org/downloads/)
-- La librería `pygame`.
+---
 
-## Instalación y Ejecución
+## 🌟 Características Principales
 
-1. Descarga el código del proyecto o clona el repositorio.
-2. Abre una terminal o consola de comandos en la carpeta del juego.
-3. Instala las dependencias ejecutando:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Inicia el juego ejecutando:
-   ```bash
-   python game.py
-   ```
-
-## Controles Principales
-- **Espacio**: Alimentar
-- **E**: Dormir
-- **J**: Jugar
-- **S**: Abrir la tienda
-
-¡Disfruta cuidando a tu mascota!
+- 🐾 **Simulación de Mascota en Tiempo Real:**
+  - Sistema de 3 estadísticas vitales: **Hambre**, **Energía** y **Felicidad** (0 - 100%).
+  - Decaimiento dinámico con alertas visuales de estado crítico (`!`).
+  - Expresiones y sprites contextuales: *Idle* (normal/feliz), *Hungry* (hambriento), *Sad* (triste) y *Sleep* (durmiendo).
+- ☀️🌙 **Ciclo Día / Noche Dinámico:**
+  - El entorno cambia automáticamente entre día y noche evaluando la hora real del sistema operativo.
+- 🎮 **Minijuego Integrado ("Atrapa las Zanahorias"):**
+  - Esquiva y atrapa zanahorias que caen para subir la felicidad de tu mascota y ganar dinero.
+- 🪙 **Economía & Tienda ("Tienda Yankii ⛩️"):**
+  - Obtén **Zanahorias Doradas (ZD)** superando el minijuego.
+  - Compra consumibles (*Agua Fresca*, *Zanahoria Rica*, *Pastel de Fresa*).
+  - Compra y equipa cosméticos inspirados en la cultura japonesa (*Gorro Yankii*, *Lentes Cool*, *Kimono Clásico*).
+- 🎒 **Mochila e Inventario:**
+  - Menú interactivo para gestionar y usar alimentos cuando tu mascota lo necesite.
+- 💾 **Persistencia Automática:**
+  - Guarda automáticamente el estado, monedas, consumibles y cosméticos en `data/save.json`.
+- 🏗️ **Arquitectura Modular (State Machine + POO):**
+  - Máquina de estados desacoplada (`START_SCREEN`, `MAIN`, `INVENTORY`, `SHOP`, `MINIGAME`).
+  - Soporte híbrido para interactuar mediante **teclado y mouse** (con botones UI y efectos *hover*).
+  - Sistema de partículas flotantes para retroalimentación visual al alimentar.
